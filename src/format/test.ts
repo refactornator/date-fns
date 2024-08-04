@@ -331,6 +331,14 @@ describe("format", () => {
       const result = format(date, "I Io II");
       expect(result).toBe("14 14th 14");
     });
+
+    describe('local week of month', () => {
+      it('works as expected', () => {
+        const date = new Date(2019, 3, 3);
+        const formattedDate = format(date, 'W');
+        expect(formattedDate).toBe('1st');
+      });
+    });
   });
 
   describe("day", () => {

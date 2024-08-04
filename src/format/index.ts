@@ -130,6 +130,7 @@ export interface FormatOptions
  * | Local week of year              | w       | 1, 2, ..., 53                     |       |
  * |                                 | wo      | 1st, 2nd, ..., 53th               | 7     |
  * |                                 | ww      | 01, 02, ..., 53                   |       |
+ * | Local week of month             | W       | 1st, 2nd, ..., 5th                | 7     |
  * | ISO week of year                | I       | 1, 2, ..., 53                     | 7     |
  * |                                 | Io      | 1st, 2nd, ..., 53th               | 7     |
  * |                                 | II      | 01, 02, ..., 53                   | 7     |
@@ -290,7 +291,7 @@ export interface FormatOptions
  * 6. Specific non-location timezones are currently unavailable in `date-fns`,
  *    so right now these tokens fall back to GMT timezones.
  *
- * 7. These patterns are not in the Unicode Technical Standard #35:
+ * 7. `These patterns are not in the Unicode Technical Standard #35:`
  *    - `i`: ISO day of week
  *    - `I`: ISO week of year
  *    - `R`: ISO week-numbering year
@@ -299,6 +300,7 @@ export interface FormatOptions
  *    - `o`: ordinal number modifier
  *    - `P`: long localized date
  *    - `p`: long localized time
+ *    - `W`: local week of month
  *
  * 8. `YY` and `YYYY` tokens represent week-numbering years but they are often confused with years.
  *    You should enable `options.useAdditionalWeekYearTokens` to use them. See: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md
